@@ -1,14 +1,20 @@
-package com.example.msgshareapp
+package com.example.msgshareapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.msgshareapp.adapter.HobbiersAdapter
+import com.example.msgshareapp.R
+import com.example.msgshareapp.model.Supplier
 import kotlinx.android.synthetic.main.activity_hobbies.*
 
 class HobbiesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hobbies)
-        val adapter = HobbiersAdapter(this, Supplier.hoppies)
+        val adapter = HobbiersAdapter(
+            this,
+            Supplier.hoppies
+        )
         hobbies_rec.adapter = adapter
     }
 }
